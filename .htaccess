@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php/$0 [PT,L]
+Options -Indexes
+ServerSignature Off
+php_value max_execution_time 100000
+php_value memory_limit 512M
+php_value max_input_vars 100000
+php_value expose_php Off
